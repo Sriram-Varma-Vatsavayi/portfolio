@@ -153,7 +153,7 @@ export const projects = [
   {
     id: 4,
     title: "PyGuardian",
-    technologies: ["Python"],
+    technologies: ["Python", "OS Libraries", "Registry APIs", "System Monitoring", "Cross-Platform Development"],
     description: "Comprehensive system auditing tool for multi-platform monitoring.",
     features: [
       "15+ system parameter monitoring",

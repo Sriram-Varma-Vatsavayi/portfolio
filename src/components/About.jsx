@@ -2,126 +2,108 @@ import { personalInfo } from '../data/portfolioData';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            About <span className="text-gradient">Me</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto rounded-full"></div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo Placeholder */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center shadow-2xl">
-                <div className="text-center">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <span className="text-4xl font-bold text-white">
-                      {personalInfo.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 font-medium">Photo Coming Soon</p>
-                </div>
-              </div>
-              
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-primary-400 rounded-full animate-pulse delay-500"></div>
-              <div className="absolute top-1/2 -right-8 w-4 h-4 bg-primary-300 rounded-full animate-pulse delay-1000"></div>
-            </div>
+    <section id="about" className="py-24 bg-white dark:bg-gray-900">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-16">
+          <div className="text-center">
+            <h2 className="text-3xl font-light text-primary-900 dark:text-white mb-4">
+              About Me
+            </h2>
           </div>
-
-          {/* Content */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Information Technology Student & ML Enthusiast
-              </h3>
+          
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+            <div className="md:col-span-2 space-y-8">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-primary-700 dark:text-primary-300 leading-relaxed text-lg font-light">
+                  {personalInfo.objective}
+                </p>
+                
+                <p className="text-primary-600 dark:text-primary-400 leading-relaxed mt-6">
+                  Currently pursuing my Bachelor's in Information Technology at GRIET with a CGPA of 8.3, 
+                  I'm passionate about machine learning and software development. Through various internships 
+                  and projects, I've gained hands-on experience in Python, ML algorithms, and system development.
+                </p>
+              </div>
               
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-                {personalInfo.objective}
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</p>
-                      <p className="text-gray-900 dark:text-white">{personalInfo.location}</p>
+              <div className="pt-4">
+                <h3 className="text-lg font-medium text-primary-900 dark:text-white mb-6">
+                  What I bring to the table
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">Full-stack development</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">Machine learning & AI</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">System architecture</span>
                     </div>
                   </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
-                      <a 
-                        href={`mailto:${personalInfo.email}`}
-                        className="text-primary-600 dark:text-primary-400 hover:underline"
-                      >
-                        {personalInfo.email}
-                      </a>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">Problem solving</span>
                     </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</p>
-                      <a 
-                        href={`tel:${personalInfo.phone}`}
-                        className="text-gray-900 dark:text-white hover:text-primary-600"
-                      >
-                        {personalInfo.phone}
-                      </a>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">Team collaboration</span>
                     </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Status</p>
-                      <p className="text-green-600 dark:text-green-400 font-medium">Available for Opportunities</p>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
+                      <span className="text-primary-600 dark:text-primary-300">Continuous learning</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-gray-700">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1">4+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Internships</div>
+            
+            <div className="space-y-6">
+              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6">
+                <h3 className="text-lg font-medium text-primary-900 dark:text-white mb-4">
+                  Quick Facts
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-sm text-primary-500 dark:text-primary-400 mb-1">Location</div>
+                    <div className="text-primary-800 dark:text-primary-200 font-medium">{personalInfo.location}</div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-sm text-primary-500 dark:text-primary-400 mb-1">Email</div>
+                    <a 
+                      href={`mailto:${personalInfo.email}`}
+                      className="text-accent-600 hover:text-accent-700 transition-colors font-medium block"
+                    >
+                      {personalInfo.email}
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <div className="text-sm text-primary-500 dark:text-primary-400 mb-1">Status</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-primary-800 dark:text-primary-200 font-medium">Available for opportunities</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1">4+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-6 py-3 bg-accent-600 hover:bg-accent-700 text-white rounded-lg transition-all duration-300 hover:shadow-lg"
+                >
+                  <span>Get in touch</span>
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
-              
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1">8.3</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">CGPA</div>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="pt-6">
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-300 hover:transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Get In Touch
-              </a>
             </div>
           </div>
         </div>

@@ -1,11 +1,8 @@
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
-import Education from './components/Education';
 import Experience from './components/Experience';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Volunteer from './components/Volunteer';
 import Contact from './components/Contact';
 
 function App() {
@@ -14,24 +11,16 @@ function App() {
       <Navigation />
       <Hero />
       <About />
-      <Education />
       <Experience />
-      <Skills />
       <Projects />
-      <Volunteer />
       <Contact />
       
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-black text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-gray-400 mb-2">
-              &copy; 2025 Sriram Varma Vatsavayi. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm">
-              Built with React, Tailwind CSS, and lots of ☕
-            </p>
-          </div>
+      <footer className="bg-primary-50 dark:bg-primary-900 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-primary-500 dark:text-primary-400 text-sm">
+            © 2025 Sriram Varma Vatsavayi
+          </p>
         </div>
       </footer>
     </div>
