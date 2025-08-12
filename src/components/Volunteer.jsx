@@ -15,7 +15,7 @@ const Volunteer = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {volunteerExperience.map((experience, index) => (
+          {volunteerExperience.map((experience) => (
             <div key={experience.id} className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg card-hover">
               {/* Icon based on organization */}
               <div className="flex items-start space-x-4">
