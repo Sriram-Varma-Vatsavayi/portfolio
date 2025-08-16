@@ -4,7 +4,6 @@ import About from './components/About';
 import Timeline from './components/Timeline';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Volunteer from './components/Volunteer';
 import Contact from './components/Contact';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Timeline />
       <Skills />
       <Projects />
-      <Volunteer />
       <Contact />
       
       {/* Footer */}
