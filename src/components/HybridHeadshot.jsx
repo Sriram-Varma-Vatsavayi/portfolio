@@ -60,7 +60,7 @@ const HybridHeadshot = ({ className = "", imageSrc = null }) => {
             
             {/* Animated title */}
             <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 animate-bounce text-sm" style={{animationDuration: '3s'}}>
-              🚀 Software Engineer & ML Enthusiast
+              Software Engineer & ML Enthusiast
             </p>
             
             {/* Minimalist divider lines */}
@@ -68,17 +68,14 @@ const HybridHeadshot = ({ className = "", imageSrc = null }) => {
             
             {/* Floating card skill tags with animations */}
             <div className="flex flex-wrap justify-center gap-2">
-              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-100">
-                React
-              </span>
-              <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-300">
+              <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-100">
                 Python
               </span>
-              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-500">
+              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-300">
                 ML/AI
               </span>
-              <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-700">
-                Node.js
+              <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm hover:scale-110 transition-transform duration-300 animate-pulse delay-500">
+                Java
               </span>
             </div>
             
