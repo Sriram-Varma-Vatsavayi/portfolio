@@ -1,4 +1,5 @@
 import { personalInfo } from '../data/portfolioData';
+import HybridHeadshot from './HybridHeadshot';
 
 const About = () => {
   return (
@@ -12,25 +13,12 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo Placeholder */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center shadow-2xl">
-                <div className="text-center">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <span className="text-4xl font-bold text-white">
-                      {personalInfo.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 font-medium">Photo Coming Soon</p>
-                </div>
-              </div>
-              
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-primary-400 rounded-full animate-pulse delay-500"></div>
-              <div className="absolute top-1/2 -right-8 w-4 h-4 bg-primary-300 rounded-full animate-pulse delay-1000"></div>
-            </div>
+          {/* Professional Headshot */}
+          <div className="flex justify-center lg:justify-start relative" style={{ height: '600px' }}>
+            <HybridHeadshot 
+              className="w-full h-full max-w-md" 
+              imageSrc="/images/professional-headshot.jpg"
+            />
           </div>
 
           {/* Content */}
