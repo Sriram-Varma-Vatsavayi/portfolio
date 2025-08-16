@@ -1,8 +1,8 @@
 const HybridHeadshot = ({ className = "", imageSrc = null }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative w-full h-full ${className}`}>
       {/* Animated outer border container */}
-      <div className="relative p-1 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse">
+      <div className="relative p-1 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse w-full h-full max-w-lg mx-auto">
         
         {/* Rotating border animation */}
         <div className="absolute inset-0 rounded-3xl">
@@ -14,16 +14,27 @@ const HybridHeadshot = ({ className = "", imageSrc = null }) => {
         </div>
 
         {/* Floating card container */}
-        <div className="relative z-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 transform hover:scale-105 transition-all duration-500">
+        <div className="relative z-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-3 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 transform hover:scale-105 transition-all duration-500">
           
           {/* Image container with minimalist hover effect */}
           <div className="relative transform rotate-1 hover:rotate-0 transition-transform duration-700">
-            <div className="w-64 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 shadow-xl">
+            <div className="w-full h-[440px] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 shadow-xl">
               {imageSrc ? (
                 <img 
                   src={imageSrc}
                   alt="Professional headshot"
-                  className="w-full h-full object-cover object-center filter grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-700"
+                  style={{
+                    filter: 'grayscale(100%)',
+                    objectFit: 'cover',
+                    objectPosition: 'center top'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.filter = 'grayscale(0%)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.filter = 'grayscale(100%)';
+                  }}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
@@ -41,19 +52,19 @@ const HybridHeadshot = ({ className = "", imageSrc = null }) => {
           </div>
 
           {/* Card details with animations */}
-          <div className="mt-6 text-center">
+          <div className="mt-3 text-center">
             {/* Animated name with gradient */}
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse mb-2">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse mb-1">
               Sriram Varma Vatsavayi
             </h3>
             
             {/* Animated title */}
-            <p className="text-blue-600 dark:text-blue-400 font-medium mb-4 animate-bounce" style={{animationDuration: '3s'}}>
+            <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 animate-bounce text-sm" style={{animationDuration: '3s'}}>
               🚀 Software Engineer & ML Enthusiast
             </p>
             
             {/* Minimalist divider lines */}
-            <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4 animate-pulse"></div>
+            <div className="w-20 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-2 animate-pulse"></div>
             
             {/* Floating card skill tags with animations */}
             <div className="flex flex-wrap justify-center gap-2">

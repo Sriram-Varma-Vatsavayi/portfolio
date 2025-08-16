@@ -16,7 +16,7 @@ const About = () => {
           {/* Professional Headshot */}
           <div className="flex justify-center lg:justify-start relative" style={{ height: '600px' }}>
             <HybridHeadshot 
-              className="w-full h-full max-w-md" 
+              className="w-full h-full" 
               imageSrc="/images/professional-headshot.jpg"
             />
           </div>
