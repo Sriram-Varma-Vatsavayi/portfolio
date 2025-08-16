@@ -17,7 +17,7 @@ const About = () => {
           <div className="flex justify-center lg:justify-start relative" style={{ height: '600px' }}>
             <HybridHeadshot 
               className="w-full h-full" 
-              imageSrc="/images/professional-headshot.jpg"
+              imageSrc={`${import.meta.env.BASE_URL}images/professional-headshot.jpg`}
             />
           </div>
 
