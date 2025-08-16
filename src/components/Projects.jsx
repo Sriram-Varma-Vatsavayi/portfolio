@@ -1,7 +1,7 @@
 import { projects } from '../data/portfolioData';
 
 const Projects = () => {
-  const ProjectCard = ({ project, index }) => (
+  const ProjectCard = ({ project }) => (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover">
       {/* Project Header */}
       <div className="p-6 pb-4">
@@ -184,14 +184,14 @@ const Projects = () => {
         </div>
 
         {/* Project Stats */}
-        <div className="grid md:grid-cols-4 gap-8 text-center">
+        <div className="grid md:grid-cols-4 gap-8 text-center mt-16">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
             <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">4</div>
             <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
           </div>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">ML</div>
+            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">Agentic AI</div>
             <div className="text-gray-600 dark:text-gray-300">Focus Area</div>
           </div>
           
@@ -201,7 +201,7 @@ const Projects = () => {
           </div>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">CV</div>
+            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">ML</div>
             <div className="text-gray-600 dark:text-gray-300">Specialization</div>
           </div>
         </div>

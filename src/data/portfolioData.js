@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Sriram Varma Vatsavayi",
   phone: "+91-7993899180",
   email: "sriramvarma2125@gmail.com",
-  linkedin: "linkedin.com/sriram-varma",
+  linkedin: "linkedin.com/in/sriram-varma-886baa247",
   github: "github.com/Sriram-Varma-Vatsavayi",
   location: "Hyderabad, Telangana, India",
   objective: "Innovative and enthusiastic Information Technology engineering student with fundamental knowledge in programming, problem-solving, and system development. Aiming to contribute to a forward-thinking firm and enhance skills through real-world applications."
@@ -153,13 +153,13 @@ export const projects = [
   {
     id: 4,
     title: "PyGuardian",
-    technologies: ["Python"],
-    description: "Comprehensive system auditing tool for multi-platform monitoring.",
+    technologies: ["Python", "System Registry", "WMI"],
+    description: "Comprehensive system auditing tool for multi-platform monitoring and security analysis.",
     features: [
-      "15+ system parameter monitoring",
-      "Cross-platform compatibility",
-      "Standalone application architecture",
-      "Real-time system health insights"
+      "15+ system parameter monitoring (CPU, Memory, Disk, Network)",
+      "Cross-platform compatibility (Windows, Linux, macOS)",
+      "Real-time system health monitoring with alerting mechanisms",
+      "Multi-threaded architecture for concurrent system monitoring"
     ],
     github: "#",
     live: "#"
